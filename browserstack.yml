@@ -1,0 +1,40 @@
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+
+framework: python
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browserName: Chrome
+    browserVersion: latest
+
+  - os: Windows
+    osVersion: 10
+    browserName: Edge
+    browserVersion: latest
+
+  - os: OS X
+    osVersion: Ventura
+    browserName: Safari
+    browserVersion: latest
+
+  - deviceName: iPhone 14
+    osVersion: 16
+    browserName: safari
+    deviceOrientation: portrait
+
+  - deviceName: Samsung Galaxy S22
+    osVersion: 12.0
+    browserName: chrome
+    deviceOrientation: portrait
+
+parallelsPerPlatform: 1
+
+buildName: elpais-build
+projectName: elpais-scraper
+
+browserstackLocal: false
+debug: true
+networkLogs: true
+consoleLogs: info
